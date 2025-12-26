@@ -26,7 +26,29 @@ To build a C program that prints integer, float,character, and string literals o
 ### Step 4: 
    Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int intLiteral = 100;            
+    float floatLiteral = 25.75;     
+    char charLiteral = 'A';          
+    char stringLiteral[] = "Hello";  
+
+    printf("Integer Literal   : %d\n", intLiteral);
+    printf("Float Literal     : %.2f\n", floatLiteral);
+    printf("Character Literal : %c\n", charLiteral);
+    printf("String Literal    : %s\n", stringLiteral);
+
+    return 0;
+}
+
 # Output:
+Integer Literal   : 100
+Float Literal     : 25.75
+Character Literal : A
+String Literal    : Hello
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -57,7 +79,24 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 6:  
   Stop
 # Program:
+#include <stdio.h>
+
+#define PI 3.14   
+
+int main()
+{
+    const int DAYS = 7;   
+
+    printf("Macro Constant PI = %.2f\n", PI);
+    printf("Constant Variable DAYS = %d\n", DAYS);
+
+    return 0;
+}
+
 # Output:
+Macro Constant PI = 3.14
+Constant Variable DAYS = 7
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -81,7 +120,29 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 5:    
    Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int i = 10;              
+    float f = 12.5;          
+    double d = 123.456;      
+    char c = 'A';            
+
+    printf("Integer value : %d\n", i);
+    printf("Float value   : %.2f\n", f);
+    printf("Double value  : %.3lf\n", d);
+    printf("Character     : %c\n", c);
+
+    return 0;
+}
+
 # Output:
+Integer value : 10
+Float value   : 12.50
+Double value  : 123.456
+Character     : A
+
 # Result: 
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
@@ -120,7 +181,54 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    printf("Enter two integers:\n");
+    scanf("%d %d", &a, &b);
+    printf("\nArithmetic Operations:\n");
+    printf("Addition       : %d\n", a + b);
+    printf("Subtraction    : %d\n", a - b);
+    printf("Multiplication : %d\n", a * b);
+
+    if (b != 0)
+    {
+        printf("Division       : %d\n", a / b);
+        printf("Remainder      : %d\n", a % b);
+    }
+    else
+    {
+        printf("Division and Remainder are not possible (division by zero).\n");
+    }
+    printf("\nBitwise Operations:\n");
+    printf("AND (a & b)        : %d\n", a & b);
+    printf("OR  (a | b)        : %d\n", a | b);
+    printf("XOR (a ^ b)        : %d\n", a ^ b);
+    printf("Left Shift (a << 1): %d\n", a << 1);
+    printf("Right Shift(a >> 1): %d\n", a >> 1);
+    printf("NOT (~a)           : %d\n", ~a);
+
+    return 0;
+}
+
 # Output:
+Arithmetic Operations:
+Addition       : 13
+Subtraction    : 7
+Multiplication : 30
+Division       : 3
+Remainder      : 1
+
+Bitwise Operations:
+AND (a & b)        : 2
+OR  (a | b)        : 11
+XOR (a ^ b)        : 9
+Left Shift (a << 1): 20
+Right Shift(a >> 1): 5
+NOT (~a)           : -11
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -165,7 +273,43 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    (isalpha(ch)) ?
+        ((ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+          ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') ?
+            printf("The character is a Vowel\n") :
+            printf("The character is a Consonant\n"))
+    : (isdigit(ch)) ?
+        printf("The character is a Digit\n")
+    :
+        printf("The character is a Special Symbol\n");
+
+    return 0;
+}
+
+
+
 # Output:
+a
+The character is a Vowel
+K
+The character is a Consonant
+5
+The character is a Digit
+ #
+The character is a Special Symbol
+
+
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
